@@ -3,6 +3,6 @@
 @extends('layouts.index')
 @section('noidung')
 <div class="bg-blue-500 ">
-aaaaaaaaaaaaaaa
+
 </div>
 @endsection

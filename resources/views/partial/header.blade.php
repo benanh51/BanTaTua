@@ -27,7 +27,42 @@
             </a>
         </div>
         <div class = "float-lef text-2x1">
-            <a href = "#"><i class="far fa-user mr-2 hover:text-white m-auto text-xl"> Sigin</i></a>
+            <a href = "#"><i class="far fa-user mr-2 hover:text-white m-auto text-xl" onclick="openForm()"> Sigin</i>
+                
+        </a>
+        
         </div>
     </nav>
 </div>
+<div id="frmlogin" class="flex justify-center overflow-hidden h-screen items-center bg-gray-200 antialiased">
+      <div class="flex flex-col w-8/12 sm:w-4/6 lg:w-1/2 max-w-2xl mx-auto rounded-lg border border-gray-300 shadow-xl">
+        <div
+          class="flex flex-row justify-between p-6 bg-white border-b border-gray-200 rounded-tl-lg rounded-tr-lg"
+        > 
+        </div>
+        <div class="flex flex-col px-6 py-5 bg-gray-50">
+          <p class="mb-2 font-semibold text-gray-700 text-center">Login</p>
+          <label>User</label>
+          <input type="textbox" placeholder="Nhập user">
+          <label>Password</label>
+          <input type="textbox" placeholder="Nhập password">
+          
+          <button onclick="closeForm()" class="px-4 py-2 text-white font-semibold bg-blue-500 rounded">
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+
+<script>
+     document.getElementById("frmlogin").style.display = "none";
+function openForm() {
+  document.getElementById("frmlogin").style.display = "block";
+}
+
+
+
+function closeForm() {
+  document.getElementById("frmlogin").style.display = "none";
+}
+</script>
