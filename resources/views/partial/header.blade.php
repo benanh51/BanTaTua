@@ -34,6 +34,8 @@
         </div>
     </nav>
 </div>
+<form action="/postLog" method="post">
+        {{csrf_field()}}
 <div id="frmlogin" class="flex justify-center overflow-hidden h-screen items-center bg-gray-200 antialiased">
       <div class="flex flex-col w-8/12 sm:w-4/6 lg:w-1/2 max-w-2xl mx-auto rounded-lg border border-gray-300 shadow-xl">
         <div
@@ -43,17 +45,17 @@
         <div class="flex flex-col px-6 py-5 bg-gray-50">
           <p class="mb-2 font-semibold text-gray-700 text-center">Login</p>
           <label>User</label>
-          <input type="textbox" placeholder="Nhập user">
+          <input type="textbox" name='us' placeholder="Nhập user">
           <label>Password</label>
-          <input type="textbox" placeholder="Nhập password">
+          <input type="textbox" name='pw' placeholder="Nhập password">
           
-          <button onclick="closeForm()" class="px-4 py-2 text-white font-semibold bg-blue-500 rounded">
+          <button type="submit" onclick="closeForm()" class="px-4 py-2 text-white font-semibold bg-blue-500 rounded">
             Login
           </button>
         </div>
       </div>
     </div>
-
+</form>
 <script>
      document.getElementById("frmlogin").style.display = "none";
 function openForm() {
