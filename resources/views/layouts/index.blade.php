@@ -14,7 +14,7 @@
     <div class="">
       @include('partial.header')
     </div>
-    <div class= "flex flex-row">
+    <div class= "flex flex-col">
       <div>
         @include('partial.leftmenu')
       </div>
