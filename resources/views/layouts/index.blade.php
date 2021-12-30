@@ -14,10 +14,11 @@
     <div class="">
       @include('partial.header')
     </div>
-    <div class= "flex flex-col">
+    <div id="body" class= "flex flex-col">
       <div>
         @include('partial.leftmenu')
       </div>
+      <div class="bg-green-300 h-20 w-full">Băng rôn của web trà sữa nha</div>
       <div>
         @yield('noidung')
       </div>

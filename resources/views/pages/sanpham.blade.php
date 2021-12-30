@@ -7,7 +7,7 @@
     <legend class="pt-4 text-center">Danh sách nước uống</legend>
     <form class="flex flex-col" method="post" action="/thempb">
     {{csrf_field()}}
-    <div class="flex flex-col px-2 py-2 w-full">
+    <div id="themsanpham" class="flex flex-col px-2 py-2 w-full">
         <div class=" flex flex-row px-2 py-2 w-full">
             <div class="">Tên sản phẩm</div>
             <div class="px-5 w-3/4" >
@@ -40,7 +40,7 @@
         </form>
 </fieldset>
 
-<div class="flex flex-col">
+<div id="sanpham" class="flex flex-col">
     <div class="flex flex-row">
     <div class="text-lg m-auto flex flex-col">
             <div class="bg-blue-200 h-20">

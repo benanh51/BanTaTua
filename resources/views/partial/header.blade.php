@@ -60,11 +60,12 @@
      document.getElementById("frmlogin").style.display = "none";
 function openForm() {
   document.getElementById("frmlogin").style.display = "block";
+  document.getElementById("body").style.display = "none";
+  
 }
-
-
-
 function closeForm() {
   document.getElementById("frmlogin").style.display = "none";
+  document.getElementById("body").style.display = "block";
+  
 }
 </script>
