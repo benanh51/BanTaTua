@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
-
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Session;
-class LoginController extends Controller
+
+class AdminController extends Controller
 {
+    public function login(){
+        return view('layouts/admin_login');
+    }
+    public function index(){
+        return view('layouts/admin_layout');
+
+    }
     public function __construct()
     {
         @session_start();
