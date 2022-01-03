@@ -14,7 +14,7 @@ class LoginController extends Controller
     }
     public function signin()
     {
-        return view('sanpham');
+        return view('');
     }
     public function postLog(Request $request)
     {   
@@ -31,10 +31,10 @@ class LoginController extends Controller
                 //$_SESSION['fullname'] = $nv[0]->tennv;
 
                 Session::put('username',$kh[0]->username);
-                
+                Session::put('fullname',$kh[0]->HovaTen);
                
-                //Session::put('id',$kh[0]->makh);
-                return redirect("sanpham");
+                //Session::put('manv',$kh[0]->makh);
+                return redirect("");
             }
             
         }

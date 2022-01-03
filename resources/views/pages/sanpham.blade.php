@@ -7,7 +7,7 @@
     <legend class="pt-4 text-center">Danh sách nước uống</legend>
     <form class="flex flex-col" method="post" action="/thempb">
     {{csrf_field()}}
-    <div class="flex flex-col px-2 py-2 w-full">
+    <div id="themsanpham" class="flex flex-col px-2 py-2 w-full">
         <div class=" flex flex-row px-2 py-2 w-full">
             <div class="">Tên sản phẩm</div>
             <div class="px-5 w-3/4" >
@@ -40,124 +40,38 @@
         </form>
 </fieldset>
 
-<div class="flex flex-col">
-    <div class="flex flex-row">
-    <div class="text-lg m-auto flex flex-col">
-            <div class="bg-blue-200 h-20">
-                
-            </div>
+<div id="sanpham" class="flex flex-col">
+<div>
+    <fieldset>
+        @if(isset($error))
+        <div>
             <div>
-                Trà sữa ô long
+                {{$error}}
             </div>
-            <div>
-                Giá: 50000
-            </div>
-            <button class="bg-red-100 ">Add to cart</button>
         </div>
-        <div class="text-lg m-auto flex flex-col">
-            <div class="bg-blue-200 h-20    ">
-                
-            </div>
-            <div>
-                Trà sữa ô long
-            </div>
-            <div>
-                Giá: 50000
-            </div>
-            <button class="bg-red-100 ">Add to cart</button>
+        @endif
+        <div>Danh sách trà sữa</div>
+        @if(isset($ds))
+                <table class="flex flex-col">
+                    
+                    <tbody>
+                        @foreach($ds as $i)
+                        <tr>
+                            <td>{{$i -> Ten}}</td>
+                            <td>{{$i -> Mota}}</td>
+                            <td>{{$i -> Gia}}</td>
+                            <td>{{$i -> size}}</td>
+                            
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            @else
+                <i>Chưa có nước nào</i>
+            @endif
         </div>
-        <div class="text-lg m-auto flex flex-col">
-            <div class="bg-blue-200 h-20    ">
-                
-            </div>
-            <div>
-                Trà sữa ô long
-            </div>
-            <div>
-                Giá: 50000
-            </div>
-            <button class="bg-red-100 ">Add to cart</button>
-        </div>
-        
-    </div>
-    <div class="flex flex-row py-10">
-        <div class="text-lg m-auto flex flex-col">
-            <div class="bg-blue-200 h-20    ">
-                
-            </div>
-            <div>
-                Trà sữa ô long
-            </div>
-            <div>
-                Giá: 50000
-            </div>
-            <button class="bg-red-100 ">Add to cart</button>
-        </div>
-        <div class="text-lg m-auto flex flex-col">
-            <div class="bg-blue-200 h-20    ">
-                
-            </div>
-            <div>
-                Trà sữa ô long
-            </div>
-            <div>
-                Giá: 50000
-            </div>
-            <button class="bg-red-100 ">Add to cart</button>
-        </div>
-        <div class="text-lg m-auto flex flex-col">
-            <div class="bg-blue-200 h-20    ">
-                
-            </div>
-            <div>
-                Trà sữa ô long
-            </div>
-            <div>
-                Giá: 50000
-            </div>
-            <button class="bg-red-100 ">Add to cart</button>
-        </div>
-        
-    </div>
-    <div class="flex flex-row">
-    <div class="text-lg m-auto flex flex-col">
-            <div class="bg-blue-200 h-20    ">
-                
-            </div>
-            <div>
-                Trà sữa ô long
-            </div>
-            <div>
-                Giá: 50000
-            </div>
-            <button class="bg-red-100 ">Add to cart</button>
-        </div>
-        <div class="text-lg m-auto flex flex-col">
-            <div class="bg-blue-200 h-20    ">
-                
-            </div>
-            <div>
-                Trà sữa ô long
-            </div>
-            <div>
-                Giá: 50000
-            </div>
-            <button class="bg-red-100 ">Add to cart</button>
-        </div>
-        <div class="text-lg m-auto flex flex-col">
-            <div class="bg-blue-200 h-20    ">
-                
-            </div>
-            <div>
-                Trà sữa ô long
-            </div>
-            <div>
-                Giá: 50000
-            </div>
-            <button class="bg-red-100 ">Add to cart</button>
-        </div>
-        
-    </div>
+    </fieldset>
+</div>
 
 
     

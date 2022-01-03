@@ -26,11 +26,15 @@
                 Giới thiệu
             </a>
         </div>
-        <div class = "float-lef text-2x1">
-            <a href = "#"><i class="far fa-user mr-2 hover:text-white m-auto text-xl" onclick="openForm()"> Sigin</i>
-                
-        </a>
-        
+        <div class = "float-lef text-2x1" >
+          
+          <div>
+            <a href = "#"><i id="signin" class="far fa-user mr-2 hover:text-white m-auto text-xl" onclick="openForm()"> Sigout</i></a>
+          </div>
+
+        @if(Session::get('fullname'))
+            {{Session::get('fullname')}}
+        @endif
         </div>
     </nav>
 </div>
@@ -60,11 +64,14 @@
      document.getElementById("frmlogin").style.display = "none";
 function openForm() {
   document.getElementById("frmlogin").style.display = "block";
+  document.getElementById("body").style.display = "none";
+  
+
+  
 }
-
-
-
 function closeForm() {
   document.getElementById("frmlogin").style.display = "none";
+  document.getElementById("body").style.display = "block";
+  
 }
 </script>
